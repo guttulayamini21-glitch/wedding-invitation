@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gopala Ventaka Sai ❤️ Guttula Yamini</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff5df;
+    color: #5b241c;
+    overflow-x: hidden;
+}
+
+/* ================= ROSE PETALS ================= */
+
+.petal {
+    position: fixed;
+    top: -50px;
+    font-size: 25px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(55, 10, 5, 0.95);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+    border-bottom: 2px solid #d8a23a;
+}
+
+nav a {
+    color: #f8d98a;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(50,10,5,.45), rgba(50,10,5,.65)),
+        url("images/couple.jpg") center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.hero-box {
+    max-width: 900px;
+    padding: 45px;
+    background: rgba(45, 7, 4, 0.65);
+    border: 2px solid #e2b44b;
+    border-radius: 25px;
+    box-shadow: 0 0 35px rgba(255,190,70,.4);
+}
+
+.ganesha {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #e4b84c;
+    margin-bottom: 20px;
+}
+
+.small-title {
+    color: #f5d48b;
+    font-size: 20px;
+}
+
+.hero h1 {
+    color: #f7d27a;
+    font-size: 55px;
+    margin: 20px 0;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 30px;
+}
+
+.hero-date {
+    margin-top: 25px;
+    color: #fff2c9;
+    font-size: 25px;
+}
+
+/* ================= COMMON ================= */
+
+section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 40px;
+    color: #7c271b;
+    margin-bottom: 35px;
+}
+
+.gold-line {
+    width: 150px;
+    height: 3px;
+    background: #d39b31;
+    margin: 15px auto 30px;
+}
+
+/* ================= PARENTS ================= */
+
+.parents {
+    background: #fff9eb;
+}
+
+.parent-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.parent-card {
+    width: 330px;
+    padding: 30px;
+    background: #fff1d0;
+    border: 2px solid #d7a443;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(100,50,10,.15);
+}
+
+.parent-card h3 {
+    color: #9b351f;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.parent-card p {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* ================= COUPLE ================= */
+
+.couple {
+    background:
+        linear-gradient(rgba(85,25,15,.65), rgba(85,25,15,.65)),
+        url("images/beach.jpg") center/cover fixed;
+    color: white;
+}
+
+.couple-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.person {
+    width: 260px;
+}
+
+.person img {
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid #e7bd58;
+    box-shadow: 0 0 25px rgba(255,220,120,.5);
+}
+
+.person h3 {
+    margin-top: 15px;
+    color: #f8d98a;
+    font-size: 25px;
+}
+
+.and {
+    font-size: 50px;
+    color: #f4c95c;
+}
+
+/* ================= EVENTS ================= */
+
+.events {
+    background: #fff8e8;
+}
+
+.event-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.event {
+    width: 240px;
+    background: #fff0cf;
+    border: 2px solid #d5a03a;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(80,30,10,.15);
+    transition: .3s;
+}
+
+.event:hover {
+    transform: translateY(-10px);
+}
+
+.event img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.event-content {
+    padding: 20px;
+}
+
+.event h3 {
+    color: #8d2d20;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.event p {
+    line-height: 1.7;
+}
+
+/* ================= DATE ================= */
+
+.date-section {
+    background: linear-gradient(135deg, #5c1009, #280503);
+    color: white;
+}
+
+.date-box {
+    max-width: 650px;
+    margin: auto;
+    padding: 45px;
+    border: 2px solid #e1b64c;
+    border-radius: 25px;
+}
+
+.date-box h2 {
+    color: #f7d37c;
+    font-size: 45px;
+    margin: 20px;
+}
+
+.date-box p {
+    font-size: 21px;
+    line-height: 2;
+}
+
+/* ================= VENUE ================= */
+
+.venue {
+    background:
+        linear-gradient(rgba(255,245,220,.75), rgba(255,245,220,.75)),
+        url("images/beach.jpg") center/cover;
+}
+
+.venue h2 {
+    font-size: 45px;
+    color: #8a2c1d;
+}
+
+.venue p {
+    font-size: 22px;
+    margin: 15px;
+}
+
+/* ================= DINNER ================= */
+
+.dinner {
+    background: #fff0cf;
+}
+
+.dinner-box {
+    max-width: 750px;
+    margin: auto;
+    padding: 40px;
+    border: 2px solid #d3a13e;
+    border-radius: 25px;
+}
+
+/* ================= WISHES ================= */
+
+.wishes {
+    background: linear-gradient(135deg, #65140c, #2c0502);
+    color: white;
+}
+
+.wishes h2 {
+    color: #f4d078;
+    font-size: 42px;
+}
+
+.wishes p {
+    max-width: 750px;
+    margin: 20px auto;
+    font-size: 21px;
+    line-height: 1.9;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #1c0302;
+    color: #eac66c;
+    text-align: center;
+    padding: 35px;
+    font-size: 18px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px) {
+
+    nav a {
+        margin: 0 5px;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .and {
+        width: 100%;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- ================= MOVING ROSE PETALS ================= -->
+
+<div class="petal" style="left:5%; animation-duration:8s;">🌹</div>
+<div class="petal" style="left:15%; animation-duration:11s;">🌹</div>
+<div class="petal" style="left:28%; animation-duration:9s;">🌹</div>
+<div class="petal" style="left:42%; animation-duration:13s;">🌹</div>
+<div class="petal" style="left:57%; animation-duration:10s;">🌹</div>
+<div class="petal" style="left:70%; animation-duration:12s;">🌹</div>
+<div class="petal" style="left:83%; animation-duration:9s;">🌹</div>
+<div class="petal" style="left:94%; animation-duration:14s;">🌹</div>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#couple">Couple</a>
+    <a href="#events">Events</a>
+    <a href="#venue">Venue</a>
+    <a href="#wishes">Wishes</a>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-box">
+
+        <img src="images/ganesha.jpg"
+             class="ganesha"
+             alt="Lord Ganesha">
+
+        <p class="small-title">
+            ॐ With the Divine Blessings of Lord Ganesha ॐ
+        </p>
+
+        <p class="small-title">
+            We joyfully invite you to celebrate the wedding of
+        </p>
+
+        <h1>
+            Gopala Ventaka Sai
+            <br>
+            &
+            <br>
+            Guttula Yamini
+        </h1>
+
+        <h2>
+            Two Hearts • One Journey • Forever
+        </h2>
+
+        <div class="hero-date">
+            29 • 07 • 2030
+        </div>
+
+        <p class="small-title">
+            A Grand Destination Wedding at Goa Beach
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COUPLE ================= -->
+
+<section class="couple" id="couple">
+
+    <h2 class="section-title" style="color:#f4d078;">
+        The Couple
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <div class="couple-container">
+
+        <div class="person">
+            <img src="images/groom.jpg" alt="Groom">
+            <h3>Gopala Ventaka Sai</h3>
+            <p>Groom</p>
+        </div>
+
+        <div class="and">
+            ♥
+        </div>
+
+        <div class="person">
+            <img src="images/bride.jpg" alt="Bride">
+            <h3>Guttula Yamini</h3>
+            <p>Bride</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DATE ================= -->
+
+<section class="date-section">
+
+    <div class="date-box">
+
+        <h2>Our Wedding Day</h2>
+
+        <p>Monday</p>
+
+        <h2>29 July 2030</h2>
+
+        <p>
+            A beautiful beginning to<br>
+            a lifetime of love, laughter and togetherness.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PARENTS ================= -->
+
+<section class="parents">
+
+    <h2 class="section-title">
+        With the Blessings of Our Parents
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <div class="parent-container">
+
+        <div class="parent-card">
+
+            <h3>Bride's Parents</h3>
+
+            <p>
+                <strong>Surya Prasad</strong>
+                <br>
+                &
+                <br>
+                <strong>Rama Devi</strong>
+            </p>
+
+        </div>
+
+
+        <div class="parent-card">
+
+            <h3>Groom's Parents</h3>
+
+            <p>
+                <strong>Gopala Rambabu</strong>
+                <br>
+                &
+                <br>
+                <strong>Kanaka Durga</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EVENTS ================= -->
+
+<section class="events" id="events">
+
+    <h2 class="section-title">
+        Our Wedding Celebrations
+    </h2>
+
+    <div class="gold-line"></div>
+
+
+    <div class="event-container">
+
+
+        <!-- HALDI -->
+
+        <div class="event">
+
+            <img src="images/haldi.jpg" alt="Haldi">
+
+            <div class="event-content">
+
+                <h3>🌼 Haldi</h3>
+
+                <p>
+                    27 July 2030
+                    <br>
+                    Time to be announced
+                </p>
+
+                <p>
+                    A joyful celebration filled
+                    with turmeric, laughter and blessings.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- MEHENDI -->
+
+        <div class="event">
+
+            <img src="images/mehendi.jpg" alt="Mehendi">
+
+            <div class="event-content">
+
+                <h3>🌿 Mehendi</h3>
+
+                <p>
+                    28 July 2030
+                    <br>
+                    Time to be announced
+                </p>
+
+                <p>
+                    Beautiful mehendi, music,
+                    dance and unforgettable memories.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEDDING -->
+
+        <div class="event">
+
+            <img src="images/wedding.jpg" alt="Wedding">
+
+            <div class="event-content">
+
+                <h3>💍 Wedding</h3>
+
+                <p>
+                    29 July 2030
+                    <br>
+                    Time to be announced
+                </p>
+
+                <p>
+                    The sacred celebration where
+                    two hearts become one.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- RECEPTION -->
+
+        <div class="event">
+
+            <img src="images/reception.jpg" alt="Reception">
+
+            <div class="event-content">
+
+                <h3>✨ Reception</h3>
+
+                <p>
+                    29 July 2030
+                    <br>
+                    Time to be announced
+                </p>
+
+                <p>
+                    Join us for an evening of
+                    celebration, music and joy.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= VENUE ================= -->
+
+<section class="venue" id="venue">
+
+    <h2>🌴 Wedding Venue 🌴</h2>
+
+    <div class="gold-line"></div>
+
+    <h2>Goa Beach</h2>
+
+    <p>
+        ✨ Destination Wedding ✨
+    </p>
+
+    <p>
+        Sun • Sand • Sea • Love • Forever
+    </p>
+
+    <p>
+        A magical celebration by the beautiful
+        shores of Goa.
+    </p>
+
+</section>
+
+
+<!-- ================= DINNER ================= -->
+
+<section class="dinner">
+
+    <div class="dinner-box">
+
+        <h2 class="section-title">
+            🍽️ Grand Dinner
+        </h2>
+
+        <div class="gold-line"></div>
+
+        <p style="font-size:21px; line-height:1.8;">
+
+            Following the celebrations,
+            please join us for a sumptuous dinner
+            filled with delicious food,
+            laughter and wonderful memories.
+
+            <br><br>
+
+            Your presence will make our celebration
+            even more special.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WARM WISHES ================= -->
+
+<section class="wishes" id="wishes">
+
+    <h2>Warm Wishes & Blessings</h2>
+
+    <div class="gold-line"></div>
+
+    <p>
+        Your presence is the greatest gift
+        we could ask for.
+    </p>
+
+    <p>
+        We would be honoured to have you join us
+        as we begin this beautiful new chapter
+        of our lives.
+    </p>
+
+    <p>
+        Come celebrate love, laughter,
+        family and togetherness with us.
+    </p>
+
+    <p>
+        With Love,
+        <br><br>
+        <strong>
+            Gopala Ventaka Sai
+            ❤️
+            Guttula Yamini
+        </strong>
+    </p>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    ✨ Two Hearts • One Forever ✨
+
+    <br><br>
+
+    Gopala Ventaka Sai & Guttula Yamini
+
+    <br><br>
+
+    29 • 07 • 2030 | Goa Beach
+
+</footer>
+
+
+</body>
+</html>
