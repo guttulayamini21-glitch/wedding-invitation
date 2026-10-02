@@ -785,3 +785,345 @@ footer {
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haldi Ceremony - Sai & Yamini</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at center, #fff6d6 0%, #fae188 60%, #e0b034 100%);
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 15px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Moving Rose Petals */
+        .petal {
+            position: fixed;
+            top: -50px;
+            width: 18px;
+            height: 26px;
+            background: radial-gradient(circle, #e91e63 20%, #990024 100%);
+            border-radius: 60% 0 60% 60%;
+            opacity: 0.85;
+            pointer-events: none;
+            z-index: 100;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translate(0, 0) rotate(0deg) scale(0.8);
+                opacity: 0.9;
+            }
+            100% {
+                transform: translate(120px, 105vh) rotate(540deg) scale(1.1);
+                opacity: 0;
+            }
+        }
+
+        .petal:nth-child(1) { left: 5%; animation-duration: 9s; animation-delay: 0s; }
+        .petal:nth-child(2) { left: 18%; animation-duration: 12s; animation-delay: 2s; width: 14px; height: 22px; }
+        .petal:nth-child(3) { left: 32%; animation-duration: 8s; animation-delay: 4s; }
+        .petal:nth-child(4) { left: 45%; animation-duration: 14s; animation-delay: 1s; width: 22px; height: 30px; }
+        .petal:nth-child(5) { left: 58%; animation-duration: 10s; animation-delay: 3s; }
+        .petal:nth-child(6) { left: 72%; animation-duration: 11s; animation-delay: 5s; width: 15px; height: 24px; }
+        .petal:nth-child(7) { left: 85%; animation-duration: 9s; animation-delay: 2s; }
+        .petal:nth-child(8) { left: 93%; animation-duration: 13s; animation-delay: 6s; }
+
+        /* Card Container */
+        .card {
+            max-width: 620px;
+            width: 100%;
+            background: #fffdf5;
+            border: 12px double #b98929;
+            outline: 3px solid #6b0f1a;
+            border-radius: 36px;
+            box-shadow: 0 25px 60px rgba(78, 14, 23, 0.45);
+            padding: 35px 25px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Deity / Ganesha Picture */
+        .god-wrap {
+            margin: 0 auto 12px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #b98929;
+            padding: 4px;
+            background: #6b0f1a;
+            box-shadow: 0 0 20px rgba(185, 137, 41, 0.6);
+            display: inline-block;
+        }
+
+        .god-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        h2.shloka {
+            font-size: 1rem;
+            color: #b98929;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        h1.title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.2rem;
+            color: #6b0f1a;
+            margin: 0;
+            line-height: 1.1;
+            text-shadow: 1px 1px 2px rgba(185, 137, 41, 0.4);
+        }
+
+        p.sub-title {
+            font-size: 0.95rem;
+            color: #555;
+            letter-spacing: 1px;
+            margin-top: 6px;
+            margin-bottom: 22px;
+        }
+
+        /* Couple Portrait Section */
+        .couple-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0 25px;
+        }
+
+        .person-box {
+            flex: 1;
+            max-width: 170px;
+        }
+
+        .arch-frame {
+            width: 140px;
+            height: 180px;
+            margin: 0 auto;
+            border-radius: 80px 80px 16px 16px;
+            border: 4px solid #b98929;
+            padding: 4px;
+            background: linear-gradient(135deg, #fae188, #b98929);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        .arch-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 76px 76px 12px 12px;
+            display: block;
+        }
+
+        .couple-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #6b0f1a;
+            margin-top: 10px;
+        }
+
+        .heart-icon {
+            font-size: 2rem;
+            color: #b98929;
+            margin-top: -30px;
+        }
+
+        /* Details */
+        .ceremony-date {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: #6b0f1a;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            padding: 8px 16px;
+            display: inline-block;
+            border-top: 1px solid #b98929;
+            border-bottom: 1px solid #b98929;
+            margin: 10px 0 15px;
+        }
+
+        .venue-box {
+            font-size: 1.1rem;
+            color: #2b2b2b;
+            margin-bottom: 20px;
+        }
+
+        .venue-box strong {
+            color: #6b0f1a;
+            display: block;
+            font-size: 1.25rem;
+            margin-top: 4px;
+        }
+
+        /* Parents Section */
+        .parents-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            background: rgba(250, 225, 136, 0.25);
+            border: 1px solid #e0c870;
+            border-radius: 14px;
+            padding: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .parent-col h4 {
+            font-size: 0.85rem;
+            color: #b98929;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .parent-col p {
+            font-size: 0.95rem;
+            color: #333;
+            line-height: 1.4;
+            font-weight: 600;
+        }
+
+        /* Other Celebrations Badges */
+        .celebrations-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            color: #6b0f1a;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .events-badges {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .events-badges span {
+            background: #6b0f1a;
+            color: #fff9e6;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid #b98929;
+        }
+
+        .dinner-message {
+            font-style: italic;
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 500px) {
+            h1.title { font-size: 2.6rem; }
+            .couple-container { gap: 10px; }
+            .arch-frame { width: 110px; height: 145px; }
+            .couple-name { font-size: 0.95rem; }
+            .parents-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Falling Petals -->
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+
+    <div class="card">
+        <!-- God Picture (Ganesha) -->
+        <div class="god-wrap">
+            <img src="ganesha.jpg" alt="Lord Ganesha">
+        </div>
+
+        <h2 class="shloka">॥ ॐ श्री गणेशाय नमः ॥</h2>
+        <h1 class="title">Haldi Ceremony</h1>
+        <p class="sub-title">A golden splash of love, joy &amp; vibrant blessings</p>
+
+        <!-- Groom & Bride Portraits -->
+        <div class="couple-container">
+            <div class="person-box">
+                <div class="arch-frame">
+                    <img src="groom.jpg" alt="Gopala Ventaka Sai">
+                </div>
+                <div class="couple-name">Gopala Ventaka Sai</div>
+            </div>
+
+            <div class="heart-icon">❦</div>
+
+            <div class="person-box">
+                <div class="arch-frame">
+                    <img src="bride.jpg" alt="Guttula Yamini">
+                </div>
+                <div class="couple-name">Guttula Yamini</div>
+            </div>
+        </div>
+
+        <!-- Date & Destination -->
+        <div class="ceremony-date">29 • 07 • 2030</div>
+        
+        <div class="venue-box">
+            A Grand Destination Celebration
+            <strong>Goa Beach, India</strong>
+        </div>
+
+        <!-- Parents Details -->
+        <div class="parents-grid">
+            <div class="parent-col">
+                <h4>Groom's Parents</h4>
+                <p>Gopala Rambabu<br>&amp; Kanaka Durga</p>
+            </div>
+            <div class="parent-col">
+                <h4>Bride's Parents</h4>
+                <p>Surya Prasad<br>&amp; Rama Devi</p>
+            </div>
+        </div>
+
+        <!-- Celebrations -->
+        <div class="celebrations-title">Followed By Wedding Festivities</div>
+        <div class="events-badges">
+            <span>Mehandi</span>
+            <span>Wedding</span>
+            <span>Reception</span>
+        </div>
+
+        <p class="dinner-message">
+            Warm wishes &amp; celebratory dinner to follow the ceremony.<br>
+            Your loving presence makes our day truly special!
+        </p>
+    </div>
+
+</body>
+</html>
